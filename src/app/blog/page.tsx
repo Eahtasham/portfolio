@@ -9,16 +9,64 @@ import { blog } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Blog",
-  description: "Writing on web development, AI, and building things.",
+  description: "Writing on web development, AI, and software engineering by Eahtasham Ummam.",
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog | Eahtasham Ummam",
+    description: "Writing on web development, AI, and software engineering by Eahtasham Ummam.",
+    url: "https://eahtasham.xyz/blog",
+    type: "website",
+  },
 };
 
 export default async function BlogPage() {
   const posts = await getPosts(20);
   const profileUrl = `https://${blog.hashnodeHost}`;
 
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Eahtasham Ummam's Blog",
+    "description": "Writing on web development, AI, and software engineering by Eahtasham Ummam.",
+    "url": "https://eahtasham.xyz/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Eahtasham Ummam",
+      "url": "https://eahtasham.xyz",
+    },
+    "blogPost": posts.map((post) => {
+      let dateISO: string | undefined = undefined;
+      try {
+        if (post.publishedAt) {
+          dateISO = new Date(post.publishedAt).toISOString();
+        }
+      } catch {
+        // fallback
+      }
+      return {
+        "@type": "BlogPosting",
+        "headline": post.title,
+        "description": post.brief,
+        "url": post.url,
+        "datePublished": dateISO,
+        "author": {
+          "@type": "Person",
+          "name": "Eahtasham Ummam",
+        },
+      };
+    }),
+  };
+
   return (
-    <SiteShell>
-      <Band topBorder={false} className="px-5 py-8 sm:px-7 sm:py-10">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      />
+      <SiteShell>
+        <Band topBorder={false} className="px-5 py-8 sm:px-7 sm:py-10">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
@@ -49,7 +97,8 @@ export default async function BlogPage() {
             <PostList posts={posts} />
           )}
         </div>
-      </Band>
-    </SiteShell>
+        </Band>
+      </SiteShell>
+    </>
   );
 }

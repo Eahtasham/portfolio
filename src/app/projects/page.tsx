@@ -8,13 +8,51 @@ import { projects } from "@/data/portfolio";
 
 export const metadata: Metadata = {
   title: "Projects",
-  description: "A collection of things I've designed and built.",
+  description: "A showcase of software systems, AI automation chatbots, and full-stack web applications designed and built by Eahtasham Ummam.",
+  alternates: {
+    canonical: "/projects",
+  },
+  openGraph: {
+    title: "Projects | Eahtasham Ummam",
+    description: "A showcase of software systems, AI automation chatbots, and full-stack web applications designed and built by Eahtasham Ummam.",
+    url: "https://eahtasham.xyz/projects",
+    type: "website",
+  },
 };
 
 export default function ProjectsPage() {
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Projects by Eahtasham Ummam",
+    "description": "A collection of software, AI tools, and full-stack web applications designed and built by Eahtasham Ummam.",
+    "url": "https://eahtasham.xyz/projects",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": projects.map((p, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": p.title,
+          "description": p.description,
+          "applicationCategory": p.category || "WebApplication",
+          "operatingSystem": "All",
+          "url": p.link,
+          "codeRepository": p.github,
+        },
+      })),
+    },
+  };
+
   return (
-    <SiteShell>
-      <Band topBorder={false} className="px-5 py-8 sm:px-7 sm:py-10">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
+      />
+      <SiteShell>
+        <Band topBorder={false} className="px-5 py-8 sm:px-7 sm:py-10">
         <Link
           href="/"
           className="inline-flex items-center gap-1.5 text-sm text-muted transition-colors hover:text-foreground"
@@ -33,7 +71,8 @@ export default function ProjectsPage() {
             <ProjectCard key={p.id} project={p} />
           ))}
         </div>
-      </Band>
-    </SiteShell>
+        </Band>
+      </SiteShell>
+    </>
   );
 }

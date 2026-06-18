@@ -1,0 +1,109 @@
+# Eahtasham Ummam
+
+Software Engineer & AI Automation Builder. Pursuing B.Tech in Computer Science at University of Calcutta. Building elegant experiences for the web, specializing in full-stack applications, AI tools, and workflow automations.
+
+## Contact & Links
+- **Website**: https://eahtasham.xyz
+- **Email**: eahtashamummam@gmail.com
+- **GitHub**: https://github.com/Eahtasham
+- **LinkedIn**: https://www.linkedin.com/in/eahtasham-ummam/
+- **Twitter / X**: https://x.com/Eahtasham_
+- **Telegram**: https://t.me/Eahtasham
+- **Blog**: https://eahtasham.hashnode.dev
+
+---
+
+## Core Skills
+- **Frontend**: React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3, Shadcn
+- **Backend & DB**: Node.js, Express, PostgreSQL, MySQL, Firebase, Java (MVC/Servlets)
+- **Languages**: JavaScript, TypeScript, Java, C++, Python
+- **Cloud & DevOps**: AWS, Vercel, GitHub Actions, Netlify
+- **Tools**: Git, GitHub, IoT (Raspberry Pi, OpenCV)
+
+---
+
+## Professional Experience
+
+### Connect2Learn (Remote)
+**Software Engineer** (June 2026 – Present)
+- Building and scaling the core learning platform end-to-end.
+- Owning full-stack feature delivery, driving performance, reliability, and DX improvements.
+- Tech Stack: Next.js, TypeScript, Node.js, MySQL.
+
+**Software Engineer Intern** (March 2026 – June 2026)
+- Built reusable, accessible UI components and integrated REST APIs.
+- Tech Stack: React, TypeScript, TailwindCSS.
+
+### Textify AI (Remote)
+**Full Stack Developer Intern** (July 2025 – April 2026)
+- Extended the analytics platform across both frontend and backend.
+- Implemented Firebase Authentication and built chart customization features.
+- Tech Stack: Next.js, TypeScript, Firebase, TailwindCSS.
+
+**Frontend Developer Intern** (Feb 2025 – June 2025)
+- Redesigned and optimized the analytics website, improving page load time by 30%.
+- Tech Stack: Next.js, TypeScript, TailwindCSS.
+
+### Indian Leather Technologists' Association (Kolkata, India)
+**Java Developer Intern** (July 2025 – Oct 2025)
+- Developed Java REST APIs, database integrations, and supported data workflows.
+- Tech Stack: Java, MySQL, JavaScript.
+
+### Indian Council of Medical Research (Kolkata, India)
+**Java Developer Intern** (Jan 2025 – June 2025)
+- Developed dynamic web pages, patient detail APIs, and mental health tools for medical professionals.
+- Tech Stack: Java, Servlets, HTML5, CSS3, MySQL, jQuery.
+
+---
+
+## Projects
+
+### OneScript
+- **Description**: AI-powered SaaS chatbot that learns from website content to answer customer questions, capture leads, and provide 24/7 support.
+- **Tech Stack**: Next.js, TailwindCSS, PostgreSQL, Gemini
+- **Link**: https://onescript.xyz
+- **GitHub**: https://github.com/eahtasham
+
+### Samvidhaan
+- **Description**: AI-powered legal assistant focused on Indian laws. Supports semantic search, case law retrieval, and contextual responses using RAG.
+- **Tech Stack**: Next.js, TailwindCSS, Python, OpenAI
+- **Link**: https://www.samvidhaan.live/
+- **GitHub**: https://github.com/Eahtasham/AI-Lawyer-Frontend
+
+### AI Mock Interview Platform (PrepWise)
+- **Description**: Interactive AI mock interview platform featuring a real-time code editor, voice agent, and analytics dashboard.
+- **Tech Stack**: Next.js, TailwindCSS, Clerk, Gemini, PostgreSQL
+- **Link**: https://prep-wise.netlify.app/
+- **GitHub**: https://github.com/Eahtasham/PrepWise
+
+### SchoolSync
+- **Description**: Full-stack school management platform featuring role-based access control (RBAC), schedules, announcements, and parent-teacher communication.
+- **Tech Stack**: Next.js, Shadcn, Prisma, PostgreSQL, TailwindCSS
+- **Link**: https://schoolsyncdev.vercel.app/
+- **GitHub**: https://github.com/Eahtasham/SchoolSync
+
+### ChatWithPDF
+- **Description**: Interact with PDF documents via AI chat, with support for text chunking, embeddings, and semantic query parsing.
+- **Tech Stack**: Next.js, RAG, Embeddings, OpenAI
+- **Link**: https://github.com/Eahtasham/ChatWithPDF
+
+### CU Dept. Management System
+- **Description**: NAAC-compliant education management system featuring student records, attendance tracking, and database-driven workflows.
+- **Tech Stack**: Java, Servlets, JSP, MySQL, JavaScript
+- **Link**: https://cucse.itech4all.in/
+
+### AI Face Recognition Door Lock
+- **Description**: Face-recognition smart lock system using Raspberry Pi and OpenCV, designed for low-power security automation.
+- **Tech Stack**: Python, OpenCV, IoT, Raspberry Pi, React Native
+- **Link**: https://github.com/Eahtasham/iot-lock-app
+
+---
+
+## Education
+- **B.Tech in Computer Science** (2023 - 2026) — University of Calcutta (GPA: 8.7)
+- **B.Sc Honours in Physics** (2020 - 2023) — University of Calcutta (GPA: 7.8)
+
+## Achievements & Certifications
+- **HackerRank**: 4-Star in C & Problem Solving (2025)
+- **GeeksforGeeks**: 200+ DSA Problems Solved (2025)
+- **Udemy Certification**: Full Stack Web Development (2024)

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -14,8 +14,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#09090b" },
+  ],
+  colorScheme: "dark light",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://eahtasham.dev"),
+  metadataBase: new URL("https://eahtasham.xyz"),
   title: {
     default: `${profile.name} — ${profile.role}`,
     template: `%s · ${profile.name}`,
@@ -23,24 +34,66 @@ export const metadata: Metadata = {
   description: profile.bio,
   keywords: [
     "Eahtasham Ummam",
+    "Eahtasham",
+    "Ummam",
     "Software Engineer",
+    "AI Automation Builder",
     "Full Stack Developer",
-    "Next.js",
-    "AI Automation",
-    "Portfolio",
+    "Next.js Developer",
+    "React Developer",
+    "Java Developer",
+    "AI Chatbot Developer",
+    "Software Engineer Kolkata",
+    "Web Developer India",
+    "OneScript",
+    "Samvidhaan AI",
+    "PrepWise AI",
   ],
-  authors: [{ name: profile.name }],
+  authors: [{ name: profile.name, url: "https://eahtasham.xyz" }],
+  creator: profile.name,
+  publisher: profile.name,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
     description: profile.bio,
-    type: "website",
-    images: [profile.avatar],
+    url: "https://eahtasham.xyz",
+    siteName: `${profile.name} Portfolio`,
+    locale: "en_US",
+    type: "profile",
+    firstName: "Eahtasham",
+    lastName: "Ummam",
+    username: "Eahtasham",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: `${profile.name} — Software Engineer & AI Automation Builder`,
+      },
+    ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: `${profile.name} — ${profile.role}`,
     description: profile.bio,
     creator: "@Eahtasham_",
+    images: ["/images/og-image.png"],
+  },
+  verification: {
+    google: "google-site-verification-id", // placeholder for GSC verification
   },
 };
 
